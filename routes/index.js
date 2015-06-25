@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+//form that posts to a route with the path /fake-login
 router.post('/fake-login', function(req, res, next){
+//set a cookie named currentUser and set the value to whatever the user entered
   res.cookie('currentUser', req.body.user_name);
   res.redirect('/');
 });
